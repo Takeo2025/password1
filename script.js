@@ -21,6 +21,8 @@ pwcreate.addEventListener('click', () => {
     const randomIndex = Math.floor(Math.random() * allletters.length);
     password += allletters[randomIndex]; 
 }
+    password = password.split('').sort(() => Math.random() - 0.5).join('')
+
     console.log(password); // 例: "A3B1C2"
     pwresult.value = password;
 });
@@ -32,4 +34,3 @@ pwcopy.addEventListener('click', () => {
     navigator.clipboard.writeText(copyDo);
     window.alert('コピーしました!');
 });
-
