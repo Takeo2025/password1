@@ -17,7 +17,7 @@ pwcreate.addEventListener('click', () => {
     password += symbols[symbolIndex]
 
     //残りの数字をランダムで取得
-    for (let i = 0; i < 5; i++) { // 5文字のパスワード
+    for (let i = 0; i < 7; i++) { // 7文字のパスワード
     const randomIndex = Math.floor(Math.random() * allletters.length);
     password += allletters[randomIndex]; 
 }
@@ -32,3 +32,4 @@ pwcopy.addEventListener('click', () => {
     navigator.clipboard.writeText(copyDo);
     window.alert('コピーしました!');
 });
+
